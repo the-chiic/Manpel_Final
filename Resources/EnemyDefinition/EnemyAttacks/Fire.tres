@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyAttackResource" format=3 uid="uid://rqhiqy2trqxq"]
+
+[ext_resource type="Script" uid="uid://b13ukf6j00a6i" path="res://Resources/DataDefinition/EnemyAttackResource.cs" id="1_npomo"]
+
+[resource]
+script = ExtResource("1_npomo")
+attackType = 1
+metadata/_custom_type_script = "uid://b13ukf6j00a6i"

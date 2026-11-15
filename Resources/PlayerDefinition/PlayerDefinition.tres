@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PlayerDefinitionData" format=3 uid="uid://dkk26mdi3l7hj"]
+
+[ext_resource type="Script" uid="uid://b13ukf6j00a6i" path="res://Resources/DataDefinition/EnemyAttackResource.cs" id="1_gqg0q"]
+[ext_resource type="Script" uid="uid://c5pnqrdfwvh5v" path="res://Resources/DataDefinition/AttacksDefinitionResource.cs" id="2_av5wo"]
+[ext_resource type="Script" uid="uid://cqodmjbr84dfo" path="res://Resources/DataDefinition/PlayerDefinitionData.cs" id="4_rvjmy"]
+
+[sub_resource type="Resource" id="Resource_y7y61"]
+script = ExtResource("1_gqg0q")
+attackType = 2
+metadata/_custom_type_script = "uid://b13ukf6j00a6i"
+
+[sub_resource type="Resource" id="Resource_45d1s"]
+script = ExtResource("2_av5wo")
+attacks = Array[ExtResource("1_gqg0q")]([SubResource("Resource_y7y61")])
+metadata/_custom_type_script = "uid://c5pnqrdfwvh5v"
+
+[resource]
+script = ExtResource("4_rvjmy")
+Attacks = SubResource("Resource_45d1s")
+metadata/_custom_type_script = "uid://cqodmjbr84dfo"

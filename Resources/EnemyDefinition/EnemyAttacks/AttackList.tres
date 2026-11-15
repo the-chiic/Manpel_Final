@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AttacksDefinitionResource" format=3 uid="uid://cf4wtolp7y6i"]
+
+[ext_resource type="Script" uid="uid://c5pnqrdfwvh5v" path="res://Resources/DataDefinition/AttacksDefinitionResource.cs" id="1_8f033"]
+[ext_resource type="Resource" uid="uid://rqhiqy2trqxq" path="res://Resources/EnemyDefinition/EnemyAttacks/Fire.tres" id="1_45hn4"]
+[ext_resource type="Resource" uid="uid://dq5u8qbxlhxlp" path="res://Resources/EnemyDefinition/EnemyAttacks/Water.tres" id="2_vwyyy"]
+
+[resource]
+script = ExtResource("1_8f033")
+attacks = Array[Object]([ExtResource("1_45hn4"), ExtResource("2_vwyyy")])
+metadata/_custom_type_script = "uid://c5pnqrdfwvh5v"

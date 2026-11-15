@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cotdrueygqfpt"]
+
+[ext_resource type="Script" uid="uid://buvjih2bpqwgr" path="res://Scripts/signals/Transition.cs" id="1_ml2rw"]
+
+[node name="Transition" type="CanvasLayer" unique_id=878912809 node_paths=PackedStringArray("Overlay")]
+layer = 100
+script = ExtResource("1_ml2rw")
+Overlay = NodePath("Overlay")
+Duration = 1.0
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=1246774290]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.1288298, 0.12882978, 0.12882978, 1)

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bl22w16vxd3il"]
+
+[ext_resource type="Script" uid="uid://csb2qpvgfkd6o" path="res://Scripts/Player.cs" id="1_gntrk"]
+[ext_resource type="Texture2D" uid="uid://bcgp1trpmf0kx" path="res://Assets/Player/Manpel_V1.png" id="2_kyqiw"]
+[ext_resource type="Script" uid="uid://b13ukf6j00a6i" path="res://Resources/DataDefinition/EnemyAttackResource.cs" id="2_nn08x"]
+[ext_resource type="Script" uid="uid://c5pnqrdfwvh5v" path="res://Resources/DataDefinition/AttacksDefinitionResource.cs" id="3_52ee3"]
+[ext_resource type="Texture2D" uid="uid://bsaoflm5daf4j" path="res://Assets/Player/Manpel_Mirando_Abajo_Derecha_Splash_V1.png" id="3_gntrk"]
+[ext_resource type="Script" uid="uid://cqodmjbr84dfo" path="res://Resources/DataDefinition/PlayerDefinitionData.cs" id="4_bhhdu"]
+
+[sub_resource type="Resource" id="Resource_52ee3"]
+script = ExtResource("2_nn08x")
+Damage = 15
+attackType = 1
+metadata/_custom_type_script = "uid://b13ukf6j00a6i"
+
+[sub_resource type="Resource" id="Resource_bhhdu"]
+script = ExtResource("2_nn08x")
+Damage = 20
+attackType = 3
+metadata/_custom_type_script = "uid://b13ukf6j00a6i"
+
+[sub_resource type="Resource" id="Resource_megsn"]
+script = ExtResource("3_52ee3")
+attacks = Array[ExtResource("2_nn08x")]([SubResource("Resource_52ee3"), SubResource("Resource_bhhdu")])
+metadata/_custom_type_script = "uid://c5pnqrdfwvh5v"
+
+[sub_resource type="Resource" id="Resource_gntrk"]
+script = ExtResource("4_bhhdu")
+DisplayName = "Manpel"
+Attacks = SubResource("Resource_megsn")
+metadata/_custom_type_script = "uid://cqodmjbr84dfo"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1cquo"]
+radius = 9.380729
+height = 18.761457
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpqav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kyqiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gntrk")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 2.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1657417588 node_paths=PackedStringArray("AnimSprite")]
+z_index = 10
+scale = Vector2(2.645, 2.645)
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_gntrk")
+Definition = SubResource("Resource_gntrk")
+AnimSprite = NodePath("AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214254715]
+scale = Vector2(1.33, 1.33)
+shape = SubResource("CapsuleShape2D_1cquo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1025533183]
+scale = Vector2(0.055, 0.055)
+sprite_frames = SubResource("SpriteFrames_rpqav")
+animation = &"Idle"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=656564996]

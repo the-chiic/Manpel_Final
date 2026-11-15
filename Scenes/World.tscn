@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://2osckyn277sn"]
+
+[ext_resource type="PackedScene" uid="uid://bl22w16vxd3il" path="res://Scenes/Player.tscn" id="1_5cjrv"]
+[ext_resource type="Script" uid="uid://8bdq6g7b7nr6" path="res://Scripts/WorldGenerator.cs" id="1_5nsto"]
+[ext_resource type="Resource" uid="uid://cspghl4uyg7hr" path="res://Resources/map1_region1.tres" id="2_gjpho"]
+[ext_resource type="PackedScene" uid="uid://dwqxi6825k63n" path="res://Scenes/map1.tscn" id="2_j0p05"]
+[ext_resource type="Resource" uid="uid://dkk26mdi3l7hj" path="res://Resources/PlayerDefinition/PlayerDefinition.tres" id="4_45d1s"]
+[ext_resource type="Script" uid="uid://5cuen6ct08fr" path="res://Scripts/utility/TurnManager.cs" id="5_p70al"]
+[ext_resource type="Script" uid="uid://doy1xsxlf3lxp" path="res://Scripts/utility/Battle/CombatTransition.cs" id="7_y7y61"]
+[ext_resource type="PackedScene" uid="uid://c8y1cvay3xg7b" path="res://Scenes/audio_stream_player.tscn" id="8_q2d71"]
+
+[node name="World" type="Node2D" unique_id=1722741833 node_paths=PackedStringArray("SoundPlayer")]
+script = ExtResource("1_5nsto")
+regions = Array[Object]([ExtResource("2_gjpho"), null])
+SoundPlayer = NodePath("AudioStreamPlayer")
+
+[node name="Player" parent="." unique_id=1657417588 instance=ExtResource("1_5cjrv")]
+position = Vector2(96, 96)
+Definition = ExtResource("4_45d1s")
+
+[node name="Map" parent="." unique_id=318713402 instance=ExtResource("2_j0p05")]
+metadata/_edit_lock_ = true
+
+[node name="TurnBaseSystem" type="Node" parent="." unique_id=1445853908]
+script = ExtResource("5_p70al")
+
+[node name="CombatTransition" type="Node" parent="." unique_id=1412393820]
+script = ExtResource("7_y7y61")
+
+[node name="AudioStreamPlayer" parent="." unique_id=277055931 instance=ExtResource("8_q2d71")]
+autoplay = true

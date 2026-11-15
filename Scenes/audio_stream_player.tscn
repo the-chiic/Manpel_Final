@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c8y1cvay3xg7b"]
+
+[ext_resource type="AudioStream" uid="uid://dpg7oref4e146" path="res://Assets/Sound/649132__sonically_sound__medievalfantasy-rpg-loop-mix-at-32-secs-to-extendrepeat.wav" id="1_px1li"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" unique_id=277055931]
+stream = ExtResource("1_px1li")

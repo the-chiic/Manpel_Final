@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MapRegionResource" format=3 uid="uid://cspghl4uyg7hr"]
+
+[ext_resource type="PackedScene" uid="uid://dwqxi6825k63n" path="res://Scenes/map1.tscn" id="1_2t7r7"]
+[ext_resource type="Script" uid="uid://cxb3ppnmr22gg" path="res://Resources/DataDefinition/MapRegionResource.cs" id="1_lmluy"]
+
+[resource]
+script = ExtResource("1_lmluy")
+Scene = ExtResource("1_2t7r7")
+metadata/_custom_type_script = "uid://cxb3ppnmr22gg"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyDefinitionData" format=3 uid="uid://bgn627ey4xyh6"]
+
+[ext_resource type="Resource" uid="uid://cf4wtolp7y6i" path="res://Resources/EnemyDefinition/EnemyAttacks/AttackList.tres" id="1_1qro3"]
+[ext_resource type="Script" uid="uid://dvk8o2hy13oou" path="res://Resources/DataDefinition/EnemyDefinitionData.cs" id="1_rhift"]
+
+[resource]
+script = ExtResource("1_rhift")
+DisplayName = "Rambiña"
+Attacks = ExtResource("1_1qro3")
+Defense = 10
+metadata/_custom_type_script = "uid://dvk8o2hy13oou"
